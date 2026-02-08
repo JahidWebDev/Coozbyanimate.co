@@ -231,7 +231,7 @@ const Pages = () => {
 {/* Main Content */}
 <div className="relative container mx-auto px-4 py-20 min-h-screen">
 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full flex justify-center z-20">
-<div className="relative  ml-[500px] bg-red-600 text-white px-12 py-5  shadow-2xl border-white/30">
+<div className="relative  ml-[450px] bg-red-600 text-white px-12 py-5  shadow-2xl border-white/30">
   
   <nav className="flex flex-col gap-4 font-semibold tracking-wide text-sm md:text-base">
     <Link to="/character-animation" className="hover:text-black transition">
@@ -252,8 +252,8 @@ const Pages = () => {
   </nav>
 
   {/* Zigzag bottom border */}
-  <div className="absolute bottom-0 left-0 w-full h-4 bg-[linear-gradient(-45deg,transparent_8px,#dc2626_0),linear-gradient(45deg,transparent_8px,#dc2626_0)] bg-[length:16px_16px] translate-y-full" />
-</div>
+ <div className="absolute bottom-0 left-0 w-full h-4 bg-[linear-gradient(-45deg,transparent_12px,#dc2626_0),linear-gradient(45deg,transparent_8px,#dc2626_0)] bg-[length:16px_16px] translate-y-full" />
+</div> 
 
 </div>
   {/* LEFT HERO TEXT */}
