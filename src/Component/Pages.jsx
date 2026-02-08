@@ -11,7 +11,7 @@ const Pages = () => {
   "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3";
 
   return (
-    <div className="relative hide-scroll">
+    <div className="relative hide-scroll h-screen overflow-y-scroll">
       {/* Navbar Section */}
       <section className="w-full relative bg-gradient-to-b from-red-700 via-[#0b0b0b] to-black overflow-hidden">
 
