@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @keyframes waveMove {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+  0%, 100% { transform: translatey(0); }
+  50% { transform: translatey(10px); }
 }
 
 @keyframes diamondGlow {
@@ -20,40 +20,17 @@ rect[fill="#facc15"] {
   animation: diamondGlow 2s ease-in-out infinite;
 }
 
-/* ===== Scrollbar Styling ===== */
-
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: 16px;   /* vertical scrollbar thickness */
-  height: 16px;  /* horizontal scrollbar thickness */
-  transition: all 0.3s ease; /* smooth transition for hover changes */
-}
-
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
-  border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: red;
-  border-radius: 8px;
-  border: 4px solid #0a0a0a; /* spacing around thumb */
-  transition: all 0.3s ease;  /* smooth hover animation */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: darkred;
-  transform: scale(1.1); /* subtle animation on hover */
+  display: none;
 }
 
 /* Firefox */
 html {
-  scrollbar-width: thin; /* can be auto, thin, none */
-  scrollbar-color: red #0a0a0a; /* thumb color and track */
-  transition: all 0.3s ease;
+  scrollbar-width: none;
 }
 
-/* IE 10+ */
+/* IE/old Edge */
 body {
-  -ms-overflow-style: scrollbar;
+  -ms-overflow-style: none;
 }
