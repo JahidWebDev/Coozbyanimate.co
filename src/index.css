@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@keyframes waveMove {
+  0%, 100% { transform: translatey(0); }
+  50% { transform: translatey(10px); }
+}
+
+@keyframes diamondGlow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* Apply to your SVG container */
+svg {
+  animation: waveMove 8s ease-in-out infinite;
+}
+
+/* Apply to diamond dots */
+rect[fill="#facc15"] {
+  animation: diamondGlow 2s ease-in-out infinite;
+}
+
