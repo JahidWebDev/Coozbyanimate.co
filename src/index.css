@@ -20,3 +20,27 @@ rect[fill="#facc15"] {
   animation: diamondGlow 2s ease-in-out infinite;
 }
 
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE/old Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+.hide-scroll {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
