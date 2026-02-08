@@ -34,3 +34,118 @@ html {
 body {
   -ms-overflow-style: none;
 }
+
+
+button {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid white;
+  color: white;
+  padding: 1rem 2rem;
+  transition: color 0.3s ease;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: rgb(255, 0, 0);
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+button::before {
+  left: 0;
+}
+
+button::after {
+  right: 0;
+}
+
+button:hover::before {
+  width: 50%;
+}
+
+button:hover::after {
+  width: 50%;
+}
+
+button:hover {
+ 
+  z-index: 1; /* bring text above the background */
+}
+
+
+/* =========================
+   FONT FACE SETUP
+========================= */
+
+/* Bebas Neue – Hero / Headline */
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Oswald – Section Titles */
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter – Body Text (Variable) */
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   THEME VARIABLES
+========================= */
+
+@theme {
+  --font-hero: "Bebas Neue", sans-serif;
+  --font-section: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-bg: #050505;
+  --color-primary: #ff1e1e;
+  --color-text: #eaeaea;
+  --color-muted: #9a9a9a;
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+
+
+/* Add this in your global CSS */
+.text-cdvibe {
+  text-shadow:
+    0 0 5px #ff1e1e,
+    0 0 10px #ff1e1e,
+    0 0 20px #ff1e1e,
+    0 0 40px #ff0000;
+  letter-spacing: 0.2em; /* extra spacing */
+}
+@keyframes glowPulse {
+ 0%, 100% { text-shadow: 0 0 5px #ff1e1e, 0 0 5px #ff1e1e, 0 0 10px #ff1e1e; }
+50% { text-shadow: 0 0 10px #ff1e1e, 0 0 10px #ff1e1e, 0 0 10px #ff1e1e; }
+}
+
+.text-cdvibe-animate {
+  animation: glowPulse 2s infinite ease-in-out;
+}
+

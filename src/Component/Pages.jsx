@@ -11,7 +11,7 @@ const Pages = () => {
   "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3";
 
   return (
-    <div className="relative hide-scroll h-screen overflow-y-scroll">
+    <div className="relative  hide-scroll">
       {/* Navbar Section */}
       <section className="w-full relative bg-gradient-to-b from-red-700 via-[#0b0b0b] to-black overflow-hidden">
 
@@ -19,7 +19,7 @@ const Pages = () => {
         <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent shadow-[0_0_12px_rgba(255,0,0,0.6)]" />
 
         {/* Main Navbar Area */}
-        <nav className="relative flex items-center justify-center py-10">
+        <nav className="relative font-body flex items-center justify-center py-10">
 
           {/* Background wave */}
           <svg
@@ -186,7 +186,7 @@ const Pages = () => {
             <div className="w-[1px] h-10 bg-white/20" />
 
             {/* Brand text */}
-            <h1 className="text-white text-xl tracking-[0.25em] font-semibold">
+            <h1 className="text-white text-hero text-xl tracking-[0.25em] font-semibold">
               COOZBYANIMATE
               <span className="text-red-500 ml-1">.CO</span>
             </h1>
@@ -231,25 +231,26 @@ const Pages = () => {
 {/* Main Content */}
 <div className="relative container mx-auto px-4 py-20 min-h-screen">
 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full flex justify-center z-20">
-<div className="relative  ml-[450px] bg-red-600 text-white px-12 py-5  shadow-2xl border-white/30">
+<div className="relative  ml-[540px] bg-red-600 text-white px-10 py-5  shadow-2xl border-white/30">
   
-  <nav className="flex flex-col gap-4 font-semibold tracking-wide text-sm md:text-base">
-    <Link to="/character-animation" className="hover:text-black transition">
-      Character Animation
-    </Link>
+<nav className="flex font-hero flex-col gap-4  tracking-widest font-semibold text-[16px] md:text-4xl lg:text-2xl">
+  <Link to="/character-animation" className="hover:text-black transition-colors duration-300">
+    Character Animation
+  </Link>
 
-    <Link to="/character-design" className="hover:text-black transition">
-      Character Design
-    </Link>
+  <Link to="/character-design" className="hover:text-black transition-colors duration-300">
+    Character Design
+  </Link>
 
-    <Link to="/game-asset" className="hover:text-black transition">
-      Game Asset
-    </Link>
+  <Link to="/game-asset" className="hover:text-black transition-colors duration-300">
+    Game Asset
+  </Link>
 
-    <Link to="/product-visual" className="hover:text-black transition">
-      Product Virtual
-    </Link>
-  </nav>
+  <Link to="/product-visual" className="hover:text-black transition-colors duration-300">
+    Product Virtual
+  </Link>
+</nav>
+
 
   {/* Zigzag bottom border */}
  <div className="absolute bottom-0 left-0 w-full h-4 bg-[linear-gradient(-45deg,transparent_12px,#dc2626_0),linear-gradient(45deg,transparent_8px,#dc2626_0)] bg-[length:16px_16px] translate-y-full" />
@@ -257,26 +258,35 @@ const Pages = () => {
 
 </div>
   {/* LEFT HERO TEXT */}
-  <div className="absolute left-16 top-32 max-w-xl">
+ {/* LEFT HERO TEXT */}
+<div className="absolute left-16 top-32 max-w-xl">
 
-    <h4 className="text-white text-4xl md:text-6xl font-light">
-      READY, SET
-    </h4>
+  {/* Small Headline */}
+  <h4 className="text-white mb-7 tracking-widest text-4xl md:text-6xl font-light font-hero">
+    READY, SET
+  </h4>
 
-    <h1 className="text-white text-[72px] md:text-[120px] leading-none font-bold">
-      ANIMATE<span className="text-red-500">!</span>
-    </h1>
+  {/* Main Hero Title */}
+<h1 className="text-black tracking-widest font-bold text-[72px] md:text-[120px] lg:text-[220px] leading-none font-hero text-cdvibe-animate">
+  ANIMATE<span className="text-red-500">!</span>
+</h1>
 
-    <p className="text-white/70 text-xl mt-6 leading-relaxed">
-      We aim to deliver outstanding quality for our clients. Our 3D animation
-      services include - handkey animation, character rigging and mocap data
-      cleanup & adjustment.
-    </p>
 
-    <button className="mt-10 px-8 py-4 border border-white text-white hover:bg-white hover:text-black transition duration-300">
-      GET A QUOTE
-    </button>
-  </div>
+
+
+  {/* Paragraph */}
+  <p className="text-white lg:w-[750px] text-xl mt-3 leading-relaxed font-body">
+    We aim to deliver outstanding quality for our clients. Our 3D animation
+    services include handkey animation, character rigging, and mocap data
+    cleanup & adjustment.
+  </p>
+
+  {/* Button */}
+  <button className="relative overflow-hidden mt-10 px-8 py-4 border border-white text-white font-body transition-colors duration-300 hover:bg-white hover:text-black rounded-lg">
+    <span className="relative z-10">GET A QUOTE</span>
+  </button>
+</div>
+
 
   {/* RIGHT TOP PROFILE CARD */}
   <div className="absolute right-16 top-24 w-[260px] text-end">
@@ -306,8 +316,8 @@ const Pages = () => {
     </p>
   </div>
 {/* Contact & Media Icons */}
-<div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-4">
-  <div className=" mr-300  space-y-2 text-white">
+<div className="absolute bottom-10  left-1/2 -translate-x-1/2 flex flex-col items-center space-y-4">
+  <div className=" mr-300 flex gap-4  space-y-2 text-white">
      <MdEmail className="text-2xl text-red-500" />
     <p className=" text-1xl">jahidbd8114@gmail.com</p>
   </div>
